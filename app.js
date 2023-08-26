@@ -11,7 +11,7 @@ import cors from "cors"
 config({
     path:"./config.env",
 })
-mongoose.connect("mongodb://127.0.0.1:27017",{
+mongoose.connect(process.env.DB_URL,{
     dbName:"backend"
 }).then(()=>{
     console.log("Database Connected")
